@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="recipe-title">Rezeptname</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="recipe-header">Rezeptname</h1>
+    <a href="index.html">Zurück zur Sternenschmiede</a>
+    <div id="language-switch">
+      <button onclick="setLanguage('de')">Deutsch</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+    <div id="term-switch">
+      <button onclick="toggleTerms()">Standardbegriffe</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Zutaten</h2>
+      <ul id="ingredients">
+        <li>100 g interstellarer Reis</li>
+        <li>200 g kosmische Linsen</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Zubereitung</h2>
+      <ol id="instructions">
+        <li>Die Linsen in der Sternenschmiede kochen.</li>
+        <li>Reis hinzufügen und unter Quantenfusion rühren.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

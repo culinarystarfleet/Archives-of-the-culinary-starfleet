@@ -1,0 +1,18 @@
+---
+layout: default
+title: Home
+---
+
+<h1 class="text-3xl font-bold mb-6">Recipe Archives</h1>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {% for recipe in site.recipes %}
+    <a href="{{ recipe.url | relative_url }}" class="bg-gray-800 bg-opacity-70 p-4 rounded-xl hover:bg-gray-700 transition shadow-md">
+      <h2 class="text-xl font-bold mb-2">{{ recipe.title }}</h2>
+      {% if recipe.description %}
+        <p class="text-gray-400 text-sm">{{ recipe.description }}</p>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>
+

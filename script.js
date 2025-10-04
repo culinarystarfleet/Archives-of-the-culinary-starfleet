@@ -1,34 +1,40 @@
-let language = 'de';
-let useSpaceTerms = true;
+// Kategorien und Rezepte definieren
+const recipes = {
+  "Sternenschmieden (Hauptgerichte)": [
+    { name: "Cosmic Lasagna", file: "cosmic_lasagna.html" },
+    { name: "Solar Curry", file: "solar_curry.html" }
+  ],
+  "Asteroiden-Snacks": [
+    { name: "Nebula Pancakes", file: "nebula_pancakes.html" },
+    { name: "Comet Chips", file: "comet_chips.html" }
+  ],
+  "Galaktische Desserts": [
+    { name: "Milky Way Pudding", file: "milkyway_pudding.html" }
+  ]
+};
 
-function setLanguage(lang) {
-  language = lang;
-  updateTexts();
-}
+// Dropdown-Menü erstellen
+const navbar = document.getElementById("navbar");
 
-function toggleTerms() {
-  useSpaceTerms = !useSpaceTerms;
-  updateTexts();
-}
+for (const [category, items] of Object.entries(recipes)) {
+  const dropdown = document.createElement("div");
+  dropdown.className = "dropdown";
 
-function updateTexts() {
-  // Beispiel für dynamischen Begriff
-  const oven = document.querySelectorAll('#instructions li');
-  oven.forEach(li => {
-    if(useSpaceTerms){
-      li.innerHTML = li.innerHTML.replace('Ofen', 'Sternenschmiede');
-    } else {
-      li.innerHTML = li.innerHTML.replace('Sternenschmiede', 'Ofen');
-    }
+  const button = document.createElement("button");
+  button.className = "dropbtn";
+  button.textContent = category;
+
+  const menu = document.createElement("div");
+  menu.className = "dropdown-content";
+
+  items.forEach(item => {
+    const link = document.createElement("a");
+    link.textContent = item.name;
+    link.href = `recipes/${item.file}`;
+    menu.appendChild(link);
   });
 
-  // Intro-Text ändern je nach Sprache
-  const intro = document.getElementById('intro');
-  if(intro){
-    if(language === 'de'){
-      intro.innerText = 'Willkommen in der Sternenschmiede! Entdecke Rezepte aus dem Kosmos und experimentiere mit galaktischen Zutaten.';
-    } else {
-      intro.innerText = 'Welcome to the Star Forge! Explore recipes from the cosmos and experiment with galactic ingredients.';
-    }
-  }
+  dropdown.appendChild(button);
+  dropdown.appendChild(menu);
+  navbar.appendChild(dropdown);
 }

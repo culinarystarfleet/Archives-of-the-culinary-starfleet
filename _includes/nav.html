@@ -1,18 +1,15 @@
-<nav>
-  <ul class="dropdown-menu">
-    {% for cat in site.data.categories %}
-      <li>
-        <a href="#">{{ cat.name_de }}</a>
-        <ul class="submenu">
-          {% for recipe in site.recipes %}
-            {% if recipe.path contains cat.key %}
-              <li><a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-
-
+<ul class="dropdown-menu">
+  {% for cat in site.data.categories %}
+    <li>
+      <a href="#">{{ cat[1].name_de }}</a>
+      <ul class="submenu">
+        {% for recipe in site.recipes %}
+          {% assign folder = recipe.path | split: '/' | slice: 1,1 | first %}
+          {% if folder == cat[0] %}
+            <li><a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>

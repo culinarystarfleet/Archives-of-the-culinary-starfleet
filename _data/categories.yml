@@ -1,24 +1,3 @@
-brätergerichte:
-  name_de: "Brätergerichte"
-  name_en: "Casseroles"
-  path: "braetergerichte"
-
-linsen_currys:
-  name_de: "Linsen Currys"
-  name_en: "Lentil Curries"
-  path: "linsen_currys"
-
-overnight_oats:
-  name_de: "Overnight Oats"
-  name_en: "Overnight Oats"
-  path: "overnight_oats"
-
-sternenschmiedengerichte:
-  name_de: "Sternenschmiedengerichte"
-  name_en: "Starforge Dishes"
-  path: "sternenschmiedengerichte"
-
-suppen:
-  name_de: "Suppen"
-  name_en: "Soups"
-  path: "suppen"
+- ["braetergerichte", "Brätergerichte"]
+- ["linsen_currys", "Linsen Currys"]
+- ["suppen", "Suppen"]

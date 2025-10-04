@@ -1,5 +1,6 @@
 ---
 title: "Quantum Fusion Lentil Curry"
+category: Linsen Currys
 layout: recipe
 ---
 

@@ -1,0 +1,12 @@
+---
+layout: null
+---
+[
+{% assign all_recipes = site.recipes | sort: "title" %}
+{% for recipe in all_recipes %}
+{
+  "title": "{{ recipe.title | escape }}",
+  "url": "{{ recipe.url | relative_url }}"
+}{% if forloop.last == false %},{% endif %}
+{% endfor %}
+]

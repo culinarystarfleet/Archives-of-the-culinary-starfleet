@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die Sternenschmiede</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="site-title">Die Sternenschmiede</h1>
+    <nav>
+      <ul id="menu">
+        <li><a href="recipe-template.html?recipe=spaghetti">Sternen-Spaghetti</a></li>
+        <li><a href="recipe-template.html?recipe=linsen">Linsen im Orbit</a></li>
+        <li><a href="recipe-template.html?recipe/curry">Quantum Fusion Curry</a></li>
+      </ul>
+    </nav>
+    <div id="language-switch">
+      <button onclick="setLanguage('de')">Deutsch</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+    <div id="term-switch">
+      <button onclick="toggleTerms()">Standardbegriffe</button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <p id="intro">
+        Willkommen in der Sternenschmiede! Entdecke Rezepte aus dem Kosmos und experimentiere mit galaktischen Zutaten.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

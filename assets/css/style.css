@@ -33,3 +33,38 @@ body {
 .menu li a:hover {
   color: #ffcc00;
 }
+
+#search-container {
+  margin: 1rem auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+#recipe-search {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  background: rgba(0,0,0,0.6);
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#search-results li a {
+  display: block;
+  padding: 0.5rem;
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+#search-results li a:hover {
+  background-color: rgba(255,255,255,0.1);
+}

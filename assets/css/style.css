@@ -10,16 +10,17 @@ body {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.dropdown {
+nav li.dropdown {
   position: relative;
 }
 
-.dropbtn {
+nav li.dropdown .dropbtn {
   background-color: #222;
   color: white;
   padding: 10px 16px;
@@ -27,25 +28,28 @@ nav ul {
   cursor: pointer;
 }
 
-.dropdown-content {
+nav li.dropdown .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: #333;
   min-width: 180px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
   z-index: 1;
 }
 
-.dropdown-content a {
+nav li.dropdown .dropdown-content a {
   color: white;
   padding: 10px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover { background-color: #444; }
+nav li.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropdown-content { display: block; }
 
 #lang-switch { position: absolute; top: 10px; right: 10px; }
 #lang-switch button { font-size: 1.2rem; background: none; border: none; cursor: pointer; color: white; }

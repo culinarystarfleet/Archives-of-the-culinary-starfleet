@@ -1,7 +1,17 @@
 ---
 layout: default
 ---
-<main>
-  <p><a href="{{ '/' | relative_url }}">← Zurück zur Startseite</a></p>
-  {{ content }}
-</main>
+
+<article class="bg-gray-800 bg-opacity-70 rounded-xl p-6 shadow-lg mt-6">
+  <h1 class="text-3xl font-bold mb-4">{{ page.title }}</h1>
+
+  {% if page.image %}
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="rounded-xl mb-4">
+  {% endif %}
+
+  <div class="text-yellow-200 prose prose-invert max-w-none">
+    {{ content }}
+  </div>
+
+  <p class="mt-6 text-sm text-gray-400">Filed under: {{ page.category }}</p>
+</article>

@@ -27,9 +27,9 @@ body {
   margin: 0 1rem;
 }
 
-.dropdown-menu > li > a {
+.dropdown-menu > li span {
   color: white;
-  text-decoration: none;
+  cursor: default;
   padding: 10px 16px;
   display: inline-block;
 }
@@ -44,6 +44,10 @@ body {
   z-index: 1;
 }
 
+.dropdown:hover .submenu {
+  display: block;
+}
+
 .submenu li a {
   display: block;
   color: white;
@@ -51,25 +55,6 @@ body {
   text-decoration: none;
 }
 
-.dropdown-menu > li:hover .submenu {
-  display: block;
-}
-
 .submenu li a:hover {
   background-color: #444;
 }
-
-#lang-switch {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-#lang-switch button {
-  font-size: 1.2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-}
-

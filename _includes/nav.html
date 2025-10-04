@@ -5,7 +5,7 @@
         <a href="javascript:void(0)">{{ cat[1].name_de }}</a>
         <ul class="submenu">
           {% for recipe in site.recipes %}
-            {% if recipe.path contains cat[0] %}
+            {% if recipe.path contains cat[2] %}
               <li><a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a></li>
             {% endif %}
           {% endfor %}

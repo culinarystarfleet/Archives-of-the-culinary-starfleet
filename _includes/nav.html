@@ -1,13 +1,11 @@
 <nav>
   <ul class="dropdown-menu">
     {% for cat in site.data.categories %}
-      {% assign key = cat[0] %}
-      {% assign name = cat[1] %}
       <li class="dropdown">
-        <span>{{ name }}</span>
+        <span>{{ cat[1] }}</span>
         <ul class="submenu">
           {% for recipe in site.recipes %}
-            {% if recipe.path contains key %}
+            {% if recipe.path contains cat[0] %}
               <li><a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a></li>
             {% endif %}
           {% endfor %}
@@ -16,5 +14,3 @@
     {% endfor %}
   </ul>
 </nav>
-
-

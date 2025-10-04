@@ -1,11 +1,8 @@
-title: "Archive der kulinarischen Sternenflotte"
-description: "Taste the universe — one dish at a time"
+title: Archive der kulinarischen Sternenflotte
 baseurl: ""
-url: "https://culinarystarfleet.github.io/archive-der-kulinarischen-sternenflotte"
-theme: minima
-languages: ["de", "en"]
+url: "https://USERNAME.github.io"
 
 collections:
   recipes:
     output: true
-languages: ["de", "en"]
+

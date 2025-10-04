@@ -5,3 +5,7 @@ url: "https://culinarystarfleet.github.io/archive-der-kulinarischen-sternenflott
 theme: minima
 languages: ["de", "en"]
 
+collections:
+  recipes:
+    output: true
+languages: ["de", "en"]

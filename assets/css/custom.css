@@ -1,5 +1,5 @@
 body {
-  background-image: url('{{ site.baseurl }}/assets/img/galaxy_bg.jpg');
+  background-image: url('Archives-of-the-culinary-starfleet/assets/img/galaxy_bg.jpg');
   background-size: cover;
   background-attachment: fixed;
 }

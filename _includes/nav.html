@@ -1,0 +1,19 @@
+<nav>
+  <ul>
+  {% for key, cat in site.data.categories %}
+    <li class="dropdown">
+      <button class="dropbtn">
+        {{ cat.name_de }}
+      </button>
+      <div class="dropdown-content">
+        {% assign recipes_folder = cat.path %}
+        {% for page in site.pages %}
+          {% if page.path contains recipes_folder %}
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </li>
+  {% endfor %}
+  </ul>
+</nav>

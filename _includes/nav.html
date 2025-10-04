@@ -1,16 +1,10 @@
 <nav>
-  <ul class="dropdown-menu">
+  <ul class="menu">
     {% for cat in site.data.categories %}
-      <li class="dropdown">
-        <span>{{ cat[1] }}</span>
-        <ul class="submenu">
-          {% for recipe in site.recipes %}
-            {% if recipe.path contains cat[0] %}
-              <li><a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+      <li>
+        <a href="{{ '/categories/' | append: cat[0] | append: '.html' | relative_url }}">{{ cat[1] }}</a>
       </li>
     {% endfor %}
   </ul>
 </nav>
+

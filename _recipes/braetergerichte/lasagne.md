@@ -1,6 +1,6 @@
 ---
 title: "Cosmic Lasagne"
-layout: default
+layout: recipe
 ---
 
 <h2>Cosmic Lasagne</h2>

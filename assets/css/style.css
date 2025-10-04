@@ -1,6 +1,4 @@
 body {
-  background: url('../img/galaxy_bg.jpg') no-repeat center center fixed;
-  background-size: cover;
   color: white;
   font-family: 'Orbitron', sans-serif;
   text-align: center;
@@ -18,9 +16,10 @@ nav ul {
 
 nav li.dropdown {
   position: relative;
+  display: inline-block;
 }
 
-nav li.dropdown .dropbtn {
+.dropbtn {
   background-color: #222;
   color: white;
   padding: 10px 16px;
@@ -28,28 +27,37 @@ nav li.dropdown .dropbtn {
   cursor: pointer;
 }
 
-nav li.dropdown .dropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #333;
   min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
   z-index: 1;
 }
 
-nav li.dropdown .dropdown-content a {
+.dropdown-content a {
   color: white;
   padding: 10px;
   text-decoration: none;
   display: block;
 }
 
-nav li.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
+#lang-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
-#lang-switch { position: absolute; top: 10px; right: 10px; }
-#lang-switch button { font-size: 1.2rem; background: none; border: none; cursor: pointer; color: white; }
+#lang-switch button {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}

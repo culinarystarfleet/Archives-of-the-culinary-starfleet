@@ -3,6 +3,10 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+html {
+  -webkit-text-size-adjust: 100%; /* alte Variante */
+  text-size-adjust: 100%;         /* moderne Variante für alle Browser */
+}
 
 .prose h3 {
   color: #ffd700;

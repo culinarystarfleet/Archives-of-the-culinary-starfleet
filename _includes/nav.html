@@ -11,7 +11,7 @@
           {% assign recipes_folder = cat_value.path %}
           {% for page in site.pages %}
             {% if page.path contains recipes_folder %}
-              <a href="{{ page.url }}">{{ page.title }}</a>
+              <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
             {% endif %}
           {% endfor %}
         </div>

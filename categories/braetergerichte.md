@@ -1,3 +1,9 @@
+---
+layout: default
+title: Brätergerichte
+category: braetergerichte
+---
+
 <div class="prose prose-invert max-w-none">
   <h1>{{ page.title }}</h1>
   <ul class="space-y-2">

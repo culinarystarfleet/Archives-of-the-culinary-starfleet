@@ -1,7 +1,7 @@
 brätergerichte:
   name_de: "Brätergerichte"
   name_en: "Casseroles"
-  path: "recipes/braetergerichte"
+  path: "_recipes/braetergerichte"
 
 linsen_currys:
   name_de: "Linsen Currys"
